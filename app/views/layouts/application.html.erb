@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HogwartsOnRails</title>
+    <title>Hogwarts School Web App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body></body>
+    <div class="container">
+      <header>
+        <h1>Hogwarts School of Wizards and Witches</h1>
+        <p>
+          <%= link_to 'Home', root_path %>
+        </p>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>
