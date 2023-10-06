@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'houses/index'
-  get 'houses/show'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # GET / ⇒ houses#index
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: 'houses#index'
+
+  # GET /houses/:id ⇒ houses#show
+
+  get "houses/:id", to: "houses#show", id: /\d+/, as: "house" # house_path
 end
